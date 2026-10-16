@@ -1,0 +1,109 @@
+body {
+  display: flex;
+
+}
+.characterFile {
+    width: 1200px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 250px
+}
+.charIMG {
+    width: 100%;
+    height: auto
+}
+.collapseable_sidebar {
+    width: fit-content;
+    height: auto;
+    border: 1px solid black;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+mark {
+    background-color:black;
+}
+#characterBio {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    justify-content: flex-end;
+}
+table {
+  width: fit-content;                  /* Forces the table to fill its container */
+  border-collapse: collapse;    /* Merges double cell borders into a clean single line */
+  table-layout: auto;         /* Forces uniform, predictable column widths */
+}
+th, td {
+  border: 1px solid #ddd;       /* Adds a subtle gray border around cells */
+  padding: 5px;                /* Creates breathing room inside cells */
+  text-align: left;             /* Aligns cell text neatly to the left */
+}
+.subject-info {
+    border: 1px solid black;
+}
+@keyframes blinkSmooth {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+#sagaTag {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 1075px;
+    margin-top: -1200px;
+    padding: 8px;
+    animation: blinkSmooth 1s linear infinite;
+}
+.knownAffiliates {
+    margin-left: 1275px;
+    
+  
+}
+/* Full-screen overlay for the video */
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Prevents flashing white while loading */
+  z-index: 9999; /* Keeps it above all website content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out; /* Smooth fade-out effect */
+}
+
+/* Ensure video covers the screen perfectly */
+#intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops video slightly to fill screen without stretching */
+}
+
+/* Class to trigger fade out via JavaScript */
+.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Allows users to click through to the site */
+}
+#main-container{
+    display: flex;
+}
+.introBlock {
+     width: 1200px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 250px
+}
