@@ -106,21 +106,32 @@
 const characterFile = {
     codename: "Black Moses",
     realName: "Shaun Brewer",
+    age: 34,
+    alphaClass: 'TELEP Class 4, ' + '"<b>Shmoke</b>"' + "<br>" + 'QUANTA Class 1, ' + '<b>Pocket Creation</b>' ,
+    kCat: "D",
     imgSrc: "./classifiedPic.jpg",
     subjectInfo: "An extremely powerful and elusive S.A.G.A. He’s one of the Four Horsemen. He’s one of the few AGAs to create his own codename. He’s a quick witted, self-absorbed shit-talker. Having had to care for himself most of his life, he developed an inability to connect deeply with others. However, he compensates for this by single-handedly holding The Lair together using his immense power."
 }
 
-const nextFugitive = document.getElementById("nextFugitive");
+// console.log(characterFile.codename)
+// console.log(characterFile.realName)
 
-let originalInfo = document.getElementsByClassName("subject-info")
-let originalCodename = document.getElementsByClassName("bioCodename")
-let originalName = document.getElementsByClassName("bioName")
-let originalAge = document.getElementsByClassName("bioAge")
-let originalClass = document.getElementsByClassName("bioAlphaClass")
-let originalCat = document.getElementsByClassName("kCat")
-const originalImg = document.getElementsById("charaImage");
+// const fugitiveToggle = document.getElementById("nextFugitive"); 
+// fugitiveToggle.addEventListener("click", () => {
+//     let img = document.getElementById("charaImage")
+//     img.src = characterFile.imgSrc
+// })
+// const nextFugitive = document.getElementById("nextFugitive");
+
+// let originalInfo = document.getElementsByClassName("subject-info")
+// let originalCodename = document.getElementsByClassName("bioCodename")
+// let originalName = document.getElementsByClassName("bioName")
+// let originalAge = document.getElementsByClassName("bioAge")
+// let originalClass = document.getElementsByClassName("bioAlphaClass")
+// let originalCat = document.getElementsByClassName("kCat")
+// const originalImg = document.getElementsById("charaImage");
        
-nextFugitive.addEventListener("click",() => {
+// nextFugitive.addEventListener("click",() => {
     // let blackMosesFile = document.createElement("div")    
     // blackMosesFile.className = "characterFile"
     // let blackMosesImg = document.createElement("img")
@@ -129,8 +140,8 @@ nextFugitive.addEventListener("click",() => {
     // let blackMosesNewFile = document.getElementsByClassName("characterFile")
     // blackMosesNewFile.appendChild(blackMosesFile)
    
-    originalImg.src = "./classifiedPic.jpg" ß
-    })
+    // originalImg.src = "./classifiedPic.jpg" 
+    // })
 
 
 // originalInfo.innerText = fugitiveInfo.fugitives.subjectInfo;

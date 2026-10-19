@@ -1,0 +1,42 @@
+.introVid{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: auto;
+    background-image: url(../AHGHopeningAnimation.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(255, 4, 4);
+    /* padding: 120px; */
+   /*everything beneath this is for the splash slide*/
+    /* position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    transition: 6s; */
+}
+h1{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.timebox{
+    display: flex;
+    gap: 90px;
+}
+.time{
+    text-align: center;
+}
+.time h2{
+    font-size: 5rem;
+    font-weight: 100;
+}
+/* have the back BG GIF fade out and then the timer fade in and stay on screen
+for a second before the screen rolls up*/

@@ -1,23 +1,39 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.getElementById("intro-overlay");
-  const video = document.getElementById("intro-video");
+const Days = document.getElementById('days'); 
+const Hours = document.getElementById('hours');
+const Minutes = document.getElementById('minutes');
+const Seconds = document.getElementById('seconds');
 
-  // Check if the user has already seen the intro during this session
-  if (localStorage.getItem("hasSeenIntro") === "true") {
-    overlay.style.display = "none"; // Skip the video entirely
-    return;
-  }
+const targetDate = new Date("March 6 2027 00:00:00").getTime();
 
-  // When the video finishes playing, fade it out
-  video.addEventListener("ended", () => {
-    overlay.classList.add("fade-out");
+function timer (){
+    const currentDate = new Date().getTime(); 
+    const distance = targetDate - currentDate; 
 
-    // Completely remove element from DOM after fade animation finishes
+    const days = Math.floor(distance / 1000 / 60 / 60 / 24);
+    const hours = Math.floor(distance / 1000 / 60 / 60) % 24;
+    const minutes = Math.floor(distance / 1000 / 60) % 60;
+    const seconds = Math.floor(distance / 1000) % 60;
+
+    Days.innerHTML = days;
+    Hours.innerHTML = hours;
+    Minutes.innerHTML = minutes; 
+    Seconds.innerHTML = seconds; 
+
+    if(distance < 0){
+        Days.innerHTML = "00";
+        Hours.innerHTML = "00";
+        Minutes.innerHTML = "00"; 
+        Seconds.innerHTML = "00"; 
+    }
+}
+
+setInterval(timer, 1000)
+
+// below is the overlay animation
+let intro = document.querySelector('.introVid');
+
+window.addEventListener('DOMContentLoaded', () =>{
     setTimeout(() => {
-      overlay.style.display = "none";
-    }, 500); // Matches the 0.5s CSS transition
-
-    // Mark intro as seen so it doesn't play on next refresh
-    localStorage.setItem("hasSeenIntro", "true");
-  });
-});
+       intro.style.top = "-100vh";
+    }, 6000)
+})

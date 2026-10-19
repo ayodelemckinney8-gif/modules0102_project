@@ -1,28 +1,52 @@
 body {
   display: flex;
-
+  padding: 10px;
+  background-image: url(./microchipBGAHGH.gif);
+  background-size: 150%;
+}
+p{
+    color: white;
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
+}
+h1{
+    color: white;
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
+}
+h3{
+    color: white;
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
+}
+button{
+    color: white;
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
 }
 .characterFile {
     width: 1200px;
     height: auto;
-    border: 1px solid black;
+    border: 2px solid white;
     text-align: center;
-    margin-right: 250px
+    margin-right: 250px;
+    background-color: rgba(237, 43, 43, 0.616);
 }
 .charIMG {
     width: 100%;
-    height: auto
+    height: auto;
+    background-color: transparent;
 }
 .collapseable_sidebar {
     width: fit-content;
-    height: auto;
+    height: 100vh;
     border: 1px solid black;
     text-align: left;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     padding: 10px;
-    
+    background-color: rgba(248, 215, 251, 0.616);
 }
 mark {
     background-color:black;
@@ -30,15 +54,20 @@ mark {
 #characterBio {
     width: fit-content;
     height: fit-content;
-    border: 1px solid black;
+    border: 2px solid white;
     text-align: center;
     padding: 10px;
     justify-content: flex-end;
+    background-color: rgba(237, 43, 43, 0.616);
 }
 table {
   width: fit-content;                  /* Forces the table to fill its container */
   border-collapse: collapse;    /* Merges double cell borders into a clean single line */
   table-layout: auto;         /* Forces uniform, predictable column widths */
+
+    color: white;
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
 }
 th, td {
   border: 1px solid #ddd;       /* Adds a subtle gray border around cells */
@@ -46,7 +75,7 @@ th, td {
   text-align: left;             /* Aligns cell text neatly to the left */
 }
 .subject-info {
-    border: 1px solid black;
+    border: 2px solid white;
 }
 @keyframes blinkSmooth {
   0%, 100% { opacity: 1; }
@@ -55,55 +84,191 @@ th, td {
 #sagaTag {
     width: fit-content;
     height: fit-content;
-    border: 1px solid black;
+    border: 2px solid white;
     text-align: center;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     margin-left: 1075px;
-    margin-top: -1200px;
+    margin-top: -1100px;
     padding: 8px;
     animation: blinkSmooth 1s linear infinite;
+    background-color: rgba(237, 43, 43, 0.616);
 }
 .knownAffiliates {
     margin-left: 1275px;
     
   
 }
-/* Full-screen overlay for the video */
-#intro-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000; /* Prevents flashing white while loading */
-  z-index: 9999; /* Keeps it above all website content */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease-out; /* Smooth fade-out effect */
+/* Reset basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Ensure video covers the screen perfectly */
-#intro-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crops video slightly to fill screen without stretching */
+/* Fullscreen overlay container */
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000; /* Backplate color while loading */
+    z-index: 9999; /* Ensures it sits on top of all content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
 }
 
-/* Class to trigger fade out via JavaScript */
-.fade-out {
-  opacity: 0;
-  pointer-events: none; /* Allows users to click through to the site */
+/* Force the video to look sharp and cover/fit screen proportions */
+.intro-overlay video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Change to 'contain' if you don't want it cropped */
+}
+
+/* Class applied via JS to trigger the fade away animation */
+.intro-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents the invisible div from blocking clicks */
 }
 #main-container{
     display: flex;
+    gap: 20px;
+    padding: 10px
+
 }
 .introBlock {
-     width: 1200px;
-    height: auto;
+  display: flex;  
+  width: 2000px;
+    height: fit-content;
     border: 1px solid black;
     text-align: center;
-    margin-right: 250px
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px;
 }
+#centralHubGoals{
+  display: flex;
+  width: 2000px;
+  height: 750px;
+  padding: 8px;
+  border: 1px solid black;
+  flex-direction: column;
+  margin-top: 20%;
+  margin-inline-start: -1950px;
+  gap: 20px;
+}
+#consequences{
+  display:flex;
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+  flex-direction: column;
+  margin-top: 150px;
+}
+#latePic{
+  justify-content: center;
+  width: 35%;
+  height: 35%;
+  margin-left: 600px;
+  mix-blend-mode: multiply;
+}
+.classifiedFile{
+  background-color: black;
+  padding: 0 4px;
+}
+#chagLogoPicContainer{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin-top: -60px;
+}
+#checkYaStatus{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+    margin-top: -115px;
+    margin-left: 370px;
+}
+/* countdown timer */
+.introVid{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    transition: 6s;
+}
+.hero{
+    height: 100vh;
+    width: auto;
+    background-image: url(../AHGHopeningAnimation.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(255, 4, 4);
+    /* padding: 120px; */
+   /*everything beneath this is for the splash slide*/
+    /* position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    transition: 6s; */
+}
+h1{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.timebox{
+    display: flex;
+    gap: 90px;
+}
+.time{
+    text-align: center;
+}
+.time h2{
+    font-size: 5rem;
+    font-weight: 100;
+}
+#alphaFacts, #alphaFacts::before, #alphaFacts::after{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0; 
+}
+ .factClick{
+    width: 100%;
+    padding: 15px 5px; 
+    text-align: left;
+    font-size: 18px; 
+    border: none;
+}
+.factClick:hover{
+    background:rgb(255, 4, 4);
+    cursor: pointer;
+}
+.factClick::after{
+    content: '\002B';
+    float: right;
+    margin-right: 20px;
+}
+.active::after{
+    content: '\2212';
+}
+.hiddenFacts{
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+} 
