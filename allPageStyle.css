@@ -1,8 +1,15 @@
 body {
   display: flex;
   padding: 10px;
-  background-image: url(./microchipBGAHGH.gif);
-  background-size: 150%;
+  background-color: #000000;
+  font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
+    color: white;
+}
+ol{
+    font-family: 'Segoe UI Mono', 'Consolas', 'Lucida Console', Monaco, monospace; /* */
+    letter-spacing: -0.5px;
+    color: white;
 }
 p{
     color: white;
@@ -150,17 +157,19 @@ th, td {
     flex-direction: column;
     margin-left: 20px;
     padding: 10px;
+     background-color: rgba(46, 25, 25, 0.616);
 }
 #centralHubGoals{
   display: flex;
   width: 2000px;
   height: 750px;
-  padding: 8px;
+  padding: 38px;
   border: 1px solid black;
   flex-direction: column;
-  margin-top: 20%;
+  margin-top: 30%;
   margin-inline-start: -1950px;
   gap: 20px;
+   background-color: rgba(237, 43, 43, 0.616);
 }
 #consequences{
   display:flex;
@@ -176,6 +185,7 @@ th, td {
   height: 35%;
   margin-left: 600px;
   mix-blend-mode: multiply;
+  
 }
 .classifiedFile{
   background-color: black;
@@ -196,6 +206,7 @@ th, td {
     text-align: center;
     margin-top: -115px;
     margin-left: 370px;
+    font-size:larger;
 }
 /* countdown timer */
 .introVid{
